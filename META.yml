@@ -1,0 +1,16 @@
+--- #YAML:1.0
+name:                Properties
+version:             1.2
+abstract:            Module for option file parsing
+license:             ~
+author:              
+    - Markus Mazurczak <coding@markus-mazurczak.de>
+generated_by:        ExtUtils::MakeMaker version 6.42
+distribution_type:   module
+requires:     
+    Merror:                        1.4
+    strict:                        0
+    warnings:                      0
+meta-spec:
+    url:     http://module-build.sourceforge.net/META-spec-v1.3.html
+    version: 1.3
