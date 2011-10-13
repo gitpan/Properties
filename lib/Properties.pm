@@ -6,7 +6,7 @@ Properties - Module for option file parsing
 
 =head1 VERSION
 
-1.3
+1.4
 
 =head1 SYNOPSIS
 
@@ -178,7 +178,7 @@ use warnings;
 
 use Merror;
 
-our $VERSION = '1.3';
+our $VERSION = '1.4';
 
 sub new {
 	my $invocant = shift;
