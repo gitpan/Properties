@@ -6,7 +6,7 @@ Properties - Module for option file parsing
 
 =head1 VERSION
 
-1.2
+1.3
 
 =head1 SYNOPSIS
 
@@ -152,7 +152,7 @@ So, if you want to use the value of the local port you must access it via:
 
 =head1 BUGS
 		
-None known
+Option value missparsing: If an option value contains a dot the value was also parsed as an parameter structure. Fixed in version 1.3. Thanks to <florent.lartet@univ-tlse2.fr>
 		
 =head1 ACKNOWLEDGEMENTS
 
@@ -178,7 +178,7 @@ use warnings;
 
 use Merror;
 
-our $VERSION = '1.2';
+our $VERSION = '1.3';
 
 sub new {
 	my $invocant = shift;
@@ -277,7 +277,7 @@ sub get_stacktrace {
 sub splitCfgLine {
 	my ($line, $hashRef) = @_;
 
-	if($line =~ /\./) {
+	if($line =~ /\..+=/) {
 		my @parts = split(/\./, $line);
 		$parts[0] = &delWhitespaces($parts[0]);
 		my $newLine;

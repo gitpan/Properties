@@ -4,3 +4,6 @@ Revision history for Perl extension Options.
 	- original version; created by h2xs 1.23 with options
 		-AXc -n Options
 
+1.3  Thu Oct 13 16:51:00 2011
+	- added bugfix from <florent.lartet@univ-tlse2.fr>
+	- option values containing dots are also parsed in structure and not treated as a simple value
